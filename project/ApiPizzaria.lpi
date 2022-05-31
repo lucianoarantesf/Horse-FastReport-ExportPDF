@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <MainUnitHasTitleStatement Value="False"/>
+        <MainUnitHasScaledStatement Value="False"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <Title Value="Api Pizzas"/>
+      <UseAppBundle Value="False"/>
+      <ResourceType Value="res"/>
+    </General>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <AutoIncrementBuild Value="True"/>
+      <MajorVersionNr Value="1"/>
+      <BuildNr Value="4"/>
+      <StringTable Comments="Api Pizzaria" CompanyName="Api Pizzaria" FileDescription="Api Pizzaria" ProductName="Api Pizzaria"/>
+    </VersionInfo>
+    <BuildModes>
+      <Item Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+    </RunParams>
+    <RequiredPackages>
+      <Item>
+        <PackageName Value="frxe6_lazarus"/>
+      </Item>
+      <Item>
+        <PackageName Value="fr6_lazarus"/>
+      </Item>
+      <Item>
+        <PackageName Value="MemDSLaz"/>
+      </Item>
+      <Item>
+        <PackageName Value="LCL"/>
+      </Item>
+      <Item>
+        <PackageName Value="dac10"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+      <Item>
+        <PackageName Value="msprovider10"/>
+      </Item>
+      <Item>
+        <PackageName Value="unidac10"/>
+      </Item>
+    </RequiredPackages>
+    <Units>
+      <Unit>
+        <Filename Value="ApiPizzaria.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\providers\provider.connection.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ProviderConnection"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\controllers\controller.root.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\services\services.pizzas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ServicesPizzas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\controllers\controllers.pizzas.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\services\services.post.pizzas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ServicesPostPizzas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\controllers\controllers.post.pizzas.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\services\services.login.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ServicesLogin"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\controllers\controllers.logins.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\services\services.cadastros.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ServicesCadastros"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\controllers\controllers.cadastros.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="ApiPizzaria"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="..\providers;modules\.dcp;modules\.dcu;modules;modules\dataset-serialize\src;modules\handle-exception\src;modules\horse\src;modules\horse-basic-auth\src;modules\horse-compression\src;modules\horse-cors\src;modules\horse-octet-stream\src;modules\jhonson\src;..\services;..\controllers"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <SyntaxMode Value="Delphi"/>
+      </SyntaxOptions>
+    </Parsing>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf2Set"/>
+      </Debugging>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions>
+      <Item>
+        <Name Value="EAbort"/>
+      </Item>
+      <Item>
+        <Name Value="ECodetoolError"/>
+      </Item>
+      <Item>
+        <Name Value="EFOpenError"/>
+      </Item>
+      <Item>
+        <Name Value="EHorseCallbackInterrupted"/>
+      </Item>
+      <Item>
+        <Name Value="EOLEDBError"/>
+      </Item>
+      <Item>
+        <Name Value="EUniError"/>
+      </Item>
+      <Item>
+        <Name Value="EDatabaseError"/>
+      </Item>
+      <Item>
+        <Name Value="EHTTP"/>
+      </Item>
+      <Item>
+        <Name Value="Exception"/>
+      </Item>
+      <Item>
+        <Name Value="EHTTPServer"/>
+      </Item>
+      <Item>
+        <Name Value="EClassNotFound"/>
+      </Item>
+      <Item>
+        <Name Value="EReadError"/>
+      </Item>
+      <Item>
+        <Name Value="EWriteError"/>
+      </Item>
+      <Item>
+        <Name Value="EResNotFound"/>
+      </Item>
+      <Item>
+        <Name Value="EMSError"/>
+      </Item>
+      <Item>
+        <Name Value="EJSONParser"/>
+      </Item>
+      <Item>
+        <Name Value="ESQLDatabaseError"/>
+      </Item>
+      <Item>
+        <Name Value="RunError(219)"/>
+      </Item>
+      <Item>
+        <Name Value="EInvalidCast"/>
+      </Item>
+      <Item>
+        <Name Value="EConvertError"/>
+      </Item>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

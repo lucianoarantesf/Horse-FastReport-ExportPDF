@@ -1,0 +1,26 @@
+object ProviderConnection: TProviderConnection
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 150
+  HorizontalOffset = 558
+  VerticalOffset = 129
+  Width = 250
+  object dbConnection: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    BeforeConnect = dbConnectionBeforeConnect
+    BeforeDisconnect = dbConnectionBeforeDisconnect
+    DatabaseName = 'C:\Back-End\project\database\dbsPizza.db3'
+    KeepConnection = False
+    Transaction = dbTransaction
+    AlwaysUseBigint = False
+    Left = 152
+    Top = 24
+  end
+  object dbTransaction: TSQLTransaction
+    Active = False
+    Database = dbConnection
+    Left = 40
+    Top = 24
+  end
+end

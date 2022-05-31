@@ -1,0 +1,18 @@
+{
+	"name": "project",
+	"description": "Api Manejo Mobile",
+	"version": "1.0.0",
+	"homepage": "",
+	"mainsrc": "./src",
+	"projects": [],
+	"dependencies": {
+		"github.com/hashload/handle-exception": "^0.1.7",
+		"github.com/hashload/horse": "^3.0.1",
+		"github.com/hashload/horse-basic-auth": "^1.2.0",
+		"github.com/hashload/horse-compression": "^1.1.7",
+		"github.com/hashload/horse-cors": "^1.0.5",
+		"github.com/hashload/horse-octet-stream": "^1.9.7",
+		"github.com/hashload/jhonson": "^1.1.4",
+		"github.com/viniciussanchez/dataset-serialize": "^v2.4.0"
+	}
+}

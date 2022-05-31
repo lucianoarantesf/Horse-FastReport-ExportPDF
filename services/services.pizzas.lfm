@@ -1,0 +1,572 @@
+object ServicesPizzas: TServicesPizzas
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  OldCreateOrder = False
+  Height = 212
+  HorizontalOffset = 852
+  VerticalOffset = 78
+  Width = 357
+  object qryPizzas: TSQLQuery
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'TAGID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'TITLE'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'PIZZA'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftFloat
+        Precision = -1
+      end    
+      item
+        Name = 'DETALHE'
+        DataType = ftMemo
+        Precision = -1
+      end>
+    Database = ProviderConnection.dbConnection
+    Transaction = ProviderConnection.dbTransaction
+    SQL.Strings = (
+      'SELECT ID,TAGID,TITLE,PIZZA,VALOR,DETALHE FROM PIZZA'
+      'WHERE 1 = 1'
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      'ORDER BY TAGID,ID'
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+    )
+    Params = <>
+    Macros = <>
+    Left = 88
+    Top = 56
+    object qryPizzasID: TMemoField
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qryPizzasTAGID: TLongintField
+      FieldKind = fkData
+      FieldName = 'TAGID'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryPizzasTITLE: TMemoField
+      FieldKind = fkData
+      FieldName = 'TITLE'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qryPizzasPIZZA: TMemoField
+      FieldKind = fkData
+      FieldName = 'PIZZA'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qryPizzasVALOR: TFloatField
+      FieldKind = fkData
+      FieldName = 'VALOR'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Precision = -1
+    end
+    object qryPizzasDETALHE: TMemoField
+      FieldKind = fkData
+      FieldName = 'DETALHE'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftMemo
+      Transliterate = False
+    end
+  end
+  object frxReport: TfrxReport
+    Version = '6.9.15'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick, pbCopy, pbSelection]
+    PreviewOptions.Zoom = 1
+    PrintOptions.Printer = 'Padrão'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 44712.394600081
+    ReportOptions.LastChange = 44712.4134747107
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.'
+    )
+    ShowProgress = False
+    Left = 224
+    Top = 88
+    Datasets = <    
+      item
+        DataSet = frxDBDataset
+        DataSetName = 'frxDBDataset'
+      end>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000
+      Width = 1000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 210
+      PaperHeight = 297
+      PaperSize = 9
+      LeftMargin = 10
+      RightMargin = 10
+      TopMargin = 10
+      BottomMargin = 10
+      Frame.Typ = []
+      MirrorMode = []
+      object ReportTitle1: TfrxReportTitle
+        FillType = ftBrush
+        FillGap.Top = 0
+        FillGap.Left = 0
+        FillGap.Bottom = 0
+        FillGap.Right = 0
+        Frame.Typ = []
+        Height = 75.5906
+        Top = 18.89765
+        Width = 718.1107
+        object Memo1: TfrxMemoView
+          Align = baCenter
+          AllowVectorExport = True
+          Left = 147.40167
+          Width = 423.30736
+          Height = 37.7953
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -24
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.Strings = (
+            'Api Pizzas - Pizzas do Cardapio'
+          )
+          ParentFont = False
+        end
+        object Date: TfrxMemoView
+          IndexTag = 1
+          AllowVectorExport = True
+          Left = 3.77953
+          Top = 49.13389
+          Width = 71.81107
+          Height = 18.89765
+          Frame.Typ = []
+          Memo.Strings = (
+            '[Date]'
+          )
+        end
+        object Time: TfrxMemoView
+          IndexTag = 1
+          AllowVectorExport = True
+          Left = 79.37013
+          Top = 49.13389
+          Width = 79.37013
+          Height = 18.89765
+          Frame.Typ = []
+          Memo.Strings = (
+            '[Time]'
+          )
+        end
+        object Page: TfrxMemoView
+          IndexTag = 1
+          AllowVectorExport = True
+          Left = 676.53587
+          Width = 79.37013
+          Height = 18.89765
+          Frame.Typ = []
+          Memo.Strings = (
+            '[Page]'
+          )
+        end
+        object Line1: TfrxLineView
+          AllowVectorExport = True
+          Top = 70.81107
+          Width = 718.11023622
+          Color = clBlack
+          Frame.Typ = []
+          Diagonal = True
+        end
+      end
+      object MasterData1: TfrxMasterData
+        FillType = ftBrush
+        FillGap.Top = 0
+        FillGap.Left = 0
+        FillGap.Bottom = 0
+        FillGap.Right = 0
+        Frame.Typ = []
+        Height = 22.67718
+        Top = 200.31509
+        Width = 718.1107
+        DataSet = frxDBDataset
+        DataSetName = 'frxDBDataset'
+        RowCount = 0
+        object frxDBDatasetID: TfrxMemoView
+          IndexTag = 1
+          AllowVectorExport = True
+          Left = 1.55906
+          Top = 1
+          Width = 90.70872
+          Height = 18.89765
+          DataField = 'ID'
+          DataSet = frxDBDataset
+          DataSetName = 'frxDBDataset'
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.Strings = (
+            '[frxDBDataset."ID"]'
+          )
+          VAlign = vaCenter
+        end
+        object frxDBDatasetTITLE: TfrxMemoView
+          IndexTag = 1
+          AllowVectorExport = True
+          Left = 96.04731
+          Top = 1
+          Width = 98.26778
+          Height = 18.89765
+          DataField = 'TITLE'
+          DataSet = frxDBDataset
+          DataSetName = 'frxDBDataset'
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.Strings = (
+            '[frxDBDataset."TITLE"]'
+          )
+          VAlign = vaCenter
+        end
+        object frxDBDatasetPIZZA: TfrxMemoView
+          IndexTag = 1
+          AllowVectorExport = True
+          Left = 194.31509
+          Top = 1
+          Width = 200.31509
+          Height = 18.89765
+          DataField = 'PIZZA'
+          DataSet = frxDBDataset
+          DataSetName = 'frxDBDataset'
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.Strings = (
+            '[frxDBDataset."PIZZA"]'
+          )
+          VAlign = vaCenter
+        end
+        object frxDBDatasetDETALHE: TfrxMemoView
+          IndexTag = 1
+          AllowVectorExport = True
+          Left = 394.63018
+          Top = 1
+          Width = 192.75603
+          Height = 18.89765
+          DataField = 'DETALHE'
+          DataSet = frxDBDataset
+          DataSetName = 'frxDBDataset'
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.Strings = (
+            '[frxDBDataset."DETALHE"]'
+          )
+          VAlign = vaCenter
+        end
+        object frxDBDatasetVALOR: TfrxMemoView
+          IndexTag = 1
+          AllowVectorExport = True
+          Left = 591.16574
+          Top = 1
+          Width = 120.94496
+          Height = 18.89765
+          DataField = 'VALOR'
+          DataSet = frxDBDataset
+          DataSetName = 'frxDBDataset'
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.Strings = (
+            '[frxDBDataset."VALOR"]'
+          )
+          VAlign = vaCenter
+        end
+      end
+      object GroupHeader1: TfrxGroupHeader
+        FillType = ftBrush
+        FillGap.Top = 0
+        FillGap.Left = 0
+        FillGap.Bottom = 0
+        FillGap.Right = 0
+        Frame.Typ = []
+        Height = 22.67718
+        Top = 154.96073
+        Width = 718.1107
+        Condition = 'frxDBDataset."PIZZA"'
+        KeepTogether = True
+        object Memo2: TfrxMemoView
+          AllowVectorExport = True
+          Left = 1.55906
+          Top = 4
+          Width = 94.48825
+          Height = 18.89765
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.Strings = (
+            'ID'
+          )
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo3: TfrxMemoView
+          AllowVectorExport = True
+          Left = 97.93707622
+          Top = 4
+          Width = 98.26778
+          Height = 18.89765
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.Strings = (
+            'Tipo'
+          )
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo4: TfrxMemoView
+          AllowVectorExport = True
+          Left = 196.20485622
+          Top = 4
+          Width = 200.31509
+          Height = 18.89765
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.Strings = (
+            'Pizza'
+          )
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo5: TfrxMemoView
+          AllowVectorExport = True
+          Left = 396.51994622
+          Top = 4
+          Width = 192.75603
+          Height = 18.89765
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.Strings = (
+            'Detalhe'
+          )
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo6: TfrxMemoView
+          AllowVectorExport = True
+          Left = 593.05550622
+          Top = 4
+          Width = 120.94496
+          Height = 18.89765
+          Font.CharSet = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Verdana'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.Strings = (
+            'Valor'
+          )
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Line2: TfrxLineView
+          AllowVectorExport = True
+          Width = 718.11023622
+          Color = clBlack
+          Frame.Typ = []
+          Diagonal = True
+        end
+      end
+      object GroupFooter1: TfrxGroupFooter
+        FillType = ftBrush
+        FillGap.Top = 0
+        FillGap.Left = 0
+        FillGap.Bottom = 0
+        FillGap.Right = 0
+        Frame.Typ = []
+        Height = 22.67718
+        Top = 245.66945
+        Width = 718.1107
+      end
+      object PageFooter1: TfrxPageFooter
+        FillType = ftBrush
+        FillGap.Top = 0
+        FillGap.Left = 0
+        FillGap.Bottom = 0
+        FillGap.Right = 0
+        Frame.Typ = []
+        Height = 22.67718
+        Top = 328.81911
+        Width = 718.1107
+        object Memo7: TfrxMemoView
+          AllowVectorExport = True
+          Left = 3.77953
+          Top = 3.77953
+          Width = 714.33117
+          Height = 18.89765
+          Frame.Typ = []
+          Memo.Strings = (
+            'Api Pizzas - Luciano Arantes Filho -- contato.lucianoarantes@gmail.com'
+          )
+        end
+      end
+    end
+  end
+  object frxDBDataset: TfrxDBDataset
+    UserName = 'frxDBDataset'
+    CloseDataSource = False
+    FieldAliases.Strings = (
+      'ID=ID'
+      'TAGID=TAGID'
+      'TITLE=TITLE'
+      'PIZZA=PIZZA'
+      'VALOR=VALOR'
+      'DETALHE=DETALHE'
+    )
+    DataSet = qryPizzas
+    BCDToCurrency = False
+    Left = 224
+    Top = 32
+  end
+  object frxPDFExport: TfrxPDFExport
+    ShowDialog = False
+    UseFileCache = True
+    ShowProgress = False
+    OverwritePrompt = False
+    DataOnly = False
+    EmbedFontsIfProtected = False
+    InteractiveFormsFontSubset = 'A-Z,a-z,0-9,#43-#47 '
+    OpenAfterExport = False
+    PrintOptimized = False
+    Outline = False
+    Background = False
+    HTMLTags = True
+    Quality = 95
+    Transparency = False
+    Author = 'FastReport'
+    Subject = 'FastReport PDF export'
+    ProtectionFlags = [ePrint, eModify, eCopy, eAnnot]
+    HideToolbar = False
+    HideMenubar = False
+    HideWindowUI = False
+    FitWindow = False
+    CenterWindow = False
+    PrintScaling = False
+    PdfA = False
+    PDFStandard = psNone
+    PDFVersion = pv17
+    Left = 224
+    Top = 144
+  end
+end
